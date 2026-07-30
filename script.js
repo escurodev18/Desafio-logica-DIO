@@ -10,7 +10,13 @@ nameHeroi.addEventListener("click", function(e) {
     console.log("O nome do herói é "+heroi)
     console.log("Experiência: "+ xp+"xp")
 
-    if (xp <= 1000 ){
+    while (xp <= 0){
+        console.log("XP inválido")
+        break
+    }
+
+
+    if (xp >= 1 && xp <= 1000){
         console.log("O herói de nome "+ heroi +" está no nível "+xp+"xp"+" portanto é Ferro")
     }
     else if (xp > 1000 && xp <= 2000){
@@ -28,8 +34,11 @@ nameHeroi.addEventListener("click", function(e) {
     }else if (xp > 8000 && xp <= 9000){
         console.log("O herói de nome "+ heroi +" está no nível "+xp+"xp"+" portanto é Imortal")
     }
-    else{
+    else
+        if (xp >= 9001){
         console.log("Radiante")
     }
 });
+
+
 
